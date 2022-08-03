@@ -1,0 +1,25 @@
+.main {
+  padding: 40px 0;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    gap: 15px;
+  }
+  &__item{
+    img {
+      margin: 15px 0;
+    }
+    .item-about {
+      padding: 15px 0; 
+      h3 {
+        font-weight: 600;
+        font-size: 16px;
+        color: #000;
+      }
+      p {
+        margin-top: 12px;
+        color: #747474;;
+      }
+    }
+  }
+}
