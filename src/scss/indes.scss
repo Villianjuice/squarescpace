@@ -1,6 +1,17 @@
 @import './helpers/container.scss';
-@import './helpers/reset.scss'
+@import './helpers/reset.scss';
+@import './helpers//mixins';
+@import './helpers/variables';
+@import '../components/cartList/cartList.scss';
+@import '../components/cartItem/cartItem.scss';
+@import '../components/order/order.scss';
 
+
+// a {
+//   @include font (16px, 600);
+//   color: $black;
+//   text-decoration: none;
+// }
 // body {
 //   font-family: 'Montserrat',Arial,sans-serif;
 // }

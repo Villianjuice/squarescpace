@@ -26,6 +26,15 @@ body {
   font-family: 'Montserrat',Arial,sans-serif;
 }
 img {
-  // width: 100%;
+  width: 100%;
   display: block;
 }
+a {
+  text-decoration: none;
+}
+
+// a {
+//   @include font (16px, 600);
+//   color: $black;
+//   text-decoration: none;
+// }

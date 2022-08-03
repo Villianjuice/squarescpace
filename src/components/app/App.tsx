@@ -1,16 +1,22 @@
-import React from 'react'
-import Main from '../main/Main'
+import { Route, Routes } from 'react-router-dom'
 
+import Main from '../../pages/main/Main'
 import { Navbar } from '../navbar/Navbar'
+import {RowRun} from '../../composables/RowRun'
+import Cart from '../../pages/cart/Cart'
+
 import '../../scss/indes.scss'
-// import RowRun from '../../composables/RowRun'
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Main />
-      {/* <RowRun /> */}
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/cart' element={<Cart/>} />
+      </Routes>
+        <RowRun />
+
     </div>
   )
 }

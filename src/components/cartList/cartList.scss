@@ -1,0 +1,13 @@
+.cartList {
+  width: 48%;
+  &__title {
+    @include font(22px, 700);
+    margin-bottom: 18px;
+  }
+  &__total {
+    text-align: right;
+    @include font(16px, 600);
+    color: $black;
+    padding-top: 30px;
+  }
+}

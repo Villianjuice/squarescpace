@@ -8,27 +8,30 @@ import {GiShoppingBag} from 'react-icons/gi';
 
 import './Navbar.scss'
 import Logo from '../../assets/squarespace-logo-horizontal-black.svg';
+import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
   return (
-    <nav className='nav container'>
-      <ul className='nav__list'>
-        <li className='nav__item'>
-          <div >
-            <img src={Logo} alt="logo" style={{height: '70px'}} />
-          </div>
-        </li>
-        <li>
-          <div >
-          <IconContext.Provider value={{  size: '25px' }}>
-            <Badge color="default"  badgeContent="1">
-              <GiShoppingBag />
-            </Badge>  
-            </IconContext.Provider>
-          </div>
-        </li>
-      </ul>
-    </nav>
+    <div className="container">
+      <nav className='nav '>
+        <ul className='nav__list'>
+          <li className='nav__item'>
+            <Link to='/' >
+              <img src={Logo} alt="logo" style={{height: '70px'}} />
+            </Link>
+          </li>
+          <li>
+            <Link to='/cart' >
+            <IconContext.Provider value={{  size: '25px' }}>
+              <Badge color="error"  badgeContent="1">
+                <GiShoppingBag color='black'/>
+              </Badge>  
+              </IconContext.Provider>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   )
 }
 
