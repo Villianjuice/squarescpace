@@ -4,7 +4,7 @@ import './main.scss'
 
 const Main = () => {
   return (
-    <section className='main container'>
+    <section className='main container-margin'>
       <div className="main__list">
         <div className="main__item">
           <div className="item-img">

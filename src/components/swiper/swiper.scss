@@ -1,0 +1,92 @@
+
+.swiper {
+  margin: 20px 0;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+}
+.swiper-button-prev, .swiper-button-next{
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50px;
+  &:hover {
+    background: black;
+  }
+} 
+.swiper-button-prev::before {
+  content: '';
+  display: inline-flex;
+  background-image: url('../../assets/less-than-sign-10625.svg');
+  background-size: 16px 16px;
+  height: 16px;
+  width: 16px;
+}
+.swiper-button-next::before {
+  content: '';
+    display: inline-flex;
+    background-image: url('../../assets/greater-than-sign-10086.svg');
+    background-size: 16px 16px;
+    height: 16px;
+    width: 16px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}

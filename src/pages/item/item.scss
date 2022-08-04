@@ -1,8 +1,6 @@
-.nav {
-  height: 70px;
-  &__list {
+.item {
+  &__product {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 }

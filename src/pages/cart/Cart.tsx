@@ -5,7 +5,7 @@ import './cart.scss'
 
 const Cart = () => {
   return (
-    <section className="cart container">
+    <section className="cart container-margin">
       <CartList />
       <Order />
     </section>
