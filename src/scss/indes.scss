@@ -7,4 +7,10 @@
 @import '../components/order/order.scss';
 @import '../pages/item/item.scss';
 @import '../composables/button/button.scss';
+@import '../components/desc/desc.scss';
 
+
+.slider__title {
+  margin: 10px 0 30px;
+  @include font (20px, 600) 
+}

@@ -1,0 +1,30 @@
+.desc {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0; 
+  &__title {
+    color: $black;
+    @include font (22px, 600)
+  }
+  &__code {
+    color: $grey-text;
+    @include font (12px, 300);
+    margin: 20px 0;
+  }
+  &__price {
+    color: $black;
+    @include font (18px, 500)
+
+  }
+  &__desc {
+    color: $black;
+    @include font (12px, 500);
+    margin-top: 20px;
+  }
+  &__text {
+    margin: 10px 0;
+    color: $grey-text;
+    @include font (12px, 300)
+  }
+}

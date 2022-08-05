@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import { Desc } from "../../components/desc/Desc"
-import { SwiperPlag } from "../../components/swiper/SwiperPlag"
+import { SwiperPlag } from "../../components/swiperPlag/SwiperPlag"
 
 // eslint-disable-next-line
 import "swiper/css/bundle";
 import "./item.scss";
+import { Slider } from "../../components/slider/Slider";
 
 const Item = () => {
   return (
@@ -14,6 +15,7 @@ const Item = () => {
         <SwiperPlag />
         <Desc />
       </div>
+      <Slider />
     </section>
   )
 }

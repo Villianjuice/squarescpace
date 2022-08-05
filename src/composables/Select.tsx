@@ -15,7 +15,7 @@ export const  SelectSmall: React.FC <Items> = ({items}) => {
   };
 
   return (
-    <FormControl sx={{  minWidth: 170 }} size="small">
+    <FormControl sx={{  width: '200px', m: '20px 0' }} size="small">
       <InputLabel id="demo-select-small">Age</InputLabel>
       <Select
         labelId="demo-select-small"
