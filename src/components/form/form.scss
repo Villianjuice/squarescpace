@@ -1,0 +1,31 @@
+.form {
+  width: 43%;
+  &__title {
+    @include font(22px, 700);
+    margin-bottom: 18px;
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    margin: 10px 0;
+  }
+  &__input{
+    border-bottom: 1px solid $grey;
+    padding: 10px 0;
+    margin: 3px 0;
+    @include font(20px, 400);
+    color: $dark-grey;
+    width: 100%;
+  }
+  &__error {
+    color: rgb(214, 5, 5);
+    @include font(14px, 400);
+    margin-top: 5px;
+  }
+  &__info {
+    @include font(14px, 400);
+    align-self: flex-end;
+    text-align: end;
+  }
+}

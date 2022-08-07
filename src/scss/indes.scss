@@ -4,7 +4,7 @@
 @import './helpers/variables';
 @import '../components/cartList/cartList.scss';
 @import '../components/cartItem/cartItem.scss';
-@import '../components/order/order.scss';
+@import '../components/form/form.scss';
 @import '../pages/item/item.scss';
 @import '../composables/button/button.scss';
 @import '../components/desc/desc.scss';
@@ -14,3 +14,4 @@
   margin: 10px 0 30px;
   @include font (20px, 600) 
 }
+

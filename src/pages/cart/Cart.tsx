@@ -1,5 +1,5 @@
 import { CartList } from "../../components/cartList/CartList"
-import { Order } from "../../components/order/Order"
+import { Form } from "../../components/form/Form"
 
 import './cart.scss'
 
@@ -7,7 +7,7 @@ const Cart = () => {
   return (
     <section className="cart container-margin">
       <CartList />
-      <Order />
+      <Form />
     </section>
   )
 }

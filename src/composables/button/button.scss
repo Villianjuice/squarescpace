@@ -4,9 +4,16 @@
   background: $black;
   border-radius: 5px;
   border: 0.6px solid $black;
+  &__form {
+    width: 220px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+  }
   &:hover {
     color: $black;
     background: #fff;
     border: 0.6px solid $black;
+    cursor: pointer;
   }
 }
