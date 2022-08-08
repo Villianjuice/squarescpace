@@ -1,22 +1,27 @@
+import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import Main from '../../pages/main/Main'
 import { Navbar } from '../navbar/Navbar'
-import {RowRun} from '../../composables/RowRun'
-import Cart from '../../pages/cart/Cart'
-import Item from '../../pages/item/Item'
+import { RowRun } from '../../composables'
 
 import '../../scss/indes.scss'
+
+const Main = lazy(() => import('../../pages/main/Main'))
+const Cart = lazy(() => import('../../pages/cart/Cart'))
+const Item = lazy(() => import('../../pages/item/Item'))
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <Suspense>
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/item' element={<Item/>} />
       </Routes>
+      </Suspense>
+      
         <RowRun />
 
     </div>

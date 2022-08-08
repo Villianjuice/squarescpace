@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MainItem } from '../../components';
+import { MainItem, Spinner } from '../../components';
 
 import { IItem } from '../../ts/types'
 
@@ -7,7 +7,7 @@ import './main.scss'
 
 const Main = () => {
   const [items, setItems] = useState<IItem[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   const fetchItems = async () => {
@@ -28,14 +28,16 @@ const Main = () => {
     fetchItems()
   }, [])
 
+  const skeletons = [...new Array(8)].map((_, index) => <Spinner key={index} />);
 
   return (
     <section className='main container-margin'>
       <div className="main__list">
-        {items.map(item => 
+        {items && items.map(item => 
           <MainItem {...item} key={item.id}/>
         )}
-        
+
+        {loading && skeletons}
         
       </div>
     </section>
