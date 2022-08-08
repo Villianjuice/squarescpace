@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation } from "swiper";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode, Navigation } from "swiper";
 
 export  function Slider() {
   return (

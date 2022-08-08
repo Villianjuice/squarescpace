@@ -1,20 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { MainItem } from '../../components';
+
+import { IItem } from '../../ts/types'
 
 import './main.scss'
 
 const Main = () => {
+  const [items, setItems] = useState<IItem[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  const fetchItems = async () => {
+    try {
+      setLoading(true)
+      const response = await fetch('https://628f6d170e69410599dc2f20.mockapi.io/products');
+      const data: IItem[] = await response.json()
+      console.log(data)
+      setItems(data)
+      setLoading(false)
+    } catch (err)  {
+      setError(true)
+      console.log(err)
+    }
+  }
+
+  React.useEffect(() => {
+    fetchItems()
+  }, [])
+
+
   return (
     <section className='main container-margin'>
       <div className="main__list">
-        <div className="main__item">
-          <div className="item-img">
-            <img src="https://thumb.tildacdn.com/tild6232-3664-4332-b133-363464663638/-/resize/260x/-/format/webp/image.png" alt="item" />
-          </div>
-          <div className="item-about">
-            <h3 className="about-title">RING SIX FACES SCREW</h3>
-            <p className="about-price">7 900RUB</p>
-          </div>
-        </div>
+        {items.map(item => 
+          <MainItem {...item} key={item.id}/>
+        )}
+        
         
       </div>
     </section>

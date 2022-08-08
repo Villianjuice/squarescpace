@@ -1,5 +1,4 @@
-import { CartList } from "../../components/cartList/CartList"
-import { Form } from "../../components/form/Form"
+import { CartList, Form } from '../../components'
 
 import './cart.scss'
 

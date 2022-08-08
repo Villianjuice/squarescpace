@@ -1,14 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import { IconContext } from "react-icons";
 import {GiShoppingBag} from 'react-icons/gi';
 
 
-// import { Link } from 'react-router-dom'
-
 import './Navbar.scss'
 import Logo from '../../assets/squarespace-logo-horizontal-black.svg';
-import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
   return (
@@ -34,5 +32,3 @@ export const Navbar: React.FC = () => {
     </div>
   )
 }
-
-// anchorOrigin={{horizontal: 'right', vertical: 'top' }}

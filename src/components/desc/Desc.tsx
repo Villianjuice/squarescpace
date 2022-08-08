@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
-import { Btn } from "../../composables/button/Button"
-import { SelectSmall } from "../../composables/Select"
 
+import { Btn, SelectSmall } from "../../composables"
 
 export const Desc = () => {
   const items = ['ten', 'nine', 'eight']

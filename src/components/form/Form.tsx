@@ -4,7 +4,8 @@ import PhoneInput from "react-phone-input-2";
 
 import { FormInputs } from "../../ts/types";
 import { ErrorMessage } from "./ErrorMessage";
-import { Line } from "../../composables/Line";
+import { Line } from "../../composables";
+
 
 export const Form = () => {
   const {control, register, handleSubmit, reset,formState: { errors }} = useForm<FormInputs>({

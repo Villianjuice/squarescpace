@@ -1,4 +1,4 @@
-import { Line } from "../../composables/Line"
+import { Line } from "../../composables"
 import { CartItem } from "../cartItem/CartItem"
 
 // import './cartList.scss'

@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom"
-import { Desc } from "../../components/desc/Desc"
-import { SwiperPlag } from "../../components/swiperPlag/SwiperPlag"
-
-// eslint-disable-next-line
 import "swiper/css/bundle";
+
+import { Desc, Slider, SwiperPlag } from "../../components";
+
 import "./item.scss";
-import { Slider } from "../../components/slider/Slider";
 
 const Item = () => {
   return (
