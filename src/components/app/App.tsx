@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import { Navbar } from '../navbar/Navbar'
 import { RowRun } from '../../composables'
+import { Spinner } from '../spinner/Spinner'
 
 import '../../scss/indes.scss'
 
@@ -14,12 +15,12 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Suspense>
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/cart' element={<Cart/>} />
-        <Route path='/item' element={<Item/>} />
-      </Routes>
+      <Suspense fallback={<Spinner />}>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/cart' element={<Cart/>} />
+          <Route path='/item' element={<Item/>} />
+        </Routes>
       </Suspense>
       
         <RowRun />
