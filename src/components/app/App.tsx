@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 
-import { Navbar } from "../navbar/Navbar";
+import { ErrorFallback, Navbar, Spinner } from "../index";
 import { RowRun } from "../../composables";
-import { Spinner } from "../spinner/Spinner";
 
 import "../../scss/indes.scss";
 
@@ -18,12 +18,24 @@ const App = () => {
       <div className="content">
         <Navbar />
         <Suspense fallback={<Spinner />}>
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/item/:id" element={<Item />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Routes>
+                <Route path="/" element={
+                  <ErrorBoundary FallbackComponent={ErrorFallback}>
+                    <Main />
+                  </ErrorBoundary>
+                }/>
+                <Route path="/cart" element={
+                  <ErrorBoundary FallbackComponent={ErrorFallback}>
+                    <Cart />
+                  </ErrorBoundary>
+                } /> 
+                <Route path="/item/:id" element={
+                  <ErrorBoundary FallbackComponent={ErrorFallback}>
+                    <Item />
+                  </ErrorBoundary>
+                } />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
         </Suspense>
       </div>
       <RowRun />

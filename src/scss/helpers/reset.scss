@@ -58,3 +58,10 @@ button {
 .content {
   min-height: calc(100vh - 80px);
 }
+.errorBoundary {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
