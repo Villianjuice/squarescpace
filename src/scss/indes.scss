@@ -2,13 +2,17 @@
 @import "./helpers/reset.scss";
 @import "./helpers//mixins";
 @import "./helpers/variables";
+
+@import "../pages/item/item.scss";
+@import "../pages/main/main.scss";
+@import "../pages/notFound/notFound.scss";
+
 @import "../components/cartList/cartList.scss";
 @import "../components/cartItem/cartItem.scss";
 @import "../components/form/form.scss";
-@import "../pages/item/item.scss";
-@import "../composables/button/button.scss";
 @import "../components/desc/desc.scss";
-@import "../pages/notFound/notFound.scss";
+
+@import "../composables/button/button.scss";
 
 .slider__title {
   margin: 10px 0 30px;

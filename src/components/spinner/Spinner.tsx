@@ -2,9 +2,13 @@ import { ClipLoader } from "react-spinners";
 
 import "./spinner.scss";
 
-export const Spinner = () => {
+interface SpinnerProps {
+  width?: boolean
+}
+
+export const Spinner: React.FC <SpinnerProps> = ({width}) => {
   return (
-    <div className="spinner">
+    <div className={`${width && 'spinner__width'} spinner`}>
       <ClipLoader size={55} />
     </div>
   );

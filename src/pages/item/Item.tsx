@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "swiper/css/bundle";
 
-import { Desc, Slider, SwiperPlag } from "../../components";
+import { ItemProduct, Slider } from "../../components";
 
 import "./item.scss";
 
@@ -12,10 +12,7 @@ const Item = () => {
         {" "}
         ← More products
       </Link>
-      <div className="item__product">
-        <SwiperPlag />
-        <Desc />
-      </div>
+      <ItemProduct />
       <Slider />
     </section>
   );

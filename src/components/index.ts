@@ -7,3 +7,4 @@ export * from "./navbar/Navbar";
 export * from "./slider/Slider";
 export * from "./swiperPlag/SwiperPlag";
 export * from "./spinner/Spinner";
+export * from "./itemProduct/ItemProduct";

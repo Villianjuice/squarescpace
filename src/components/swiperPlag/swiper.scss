@@ -85,3 +85,8 @@
   display: block;
   object-fit: cover;
 }
+.swiper-slide-thumb-active {
+  img {
+    border: 1px solid black;
+  }
+}

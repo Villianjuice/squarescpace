@@ -1,3 +1,5 @@
+import { Url } from "url";
+
 export type FormInputs = {
   email: string;
   phone: string;
@@ -7,14 +9,19 @@ export type FormInputs = {
   address: string;
 };
 
-export interface IItem {
+export interface IItemImages {
+  images: string[] | null;
+}
+
+export interface IItemAbout {
   id: number;
   title: string;
   price: number;
   desc: string[];
   mainImage: string;
   secondImage: string;
-  images: string[];
   code: string;
   size: string[] | number[];
 }
+
+export interface IItem extends IItemImages, IItemAbout{}
