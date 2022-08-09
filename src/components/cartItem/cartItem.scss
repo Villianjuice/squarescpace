@@ -4,27 +4,28 @@
   align-items: center;
   justify-content: space-between;
   &:hover {
-    .cartItem__svg{
+    .cartItem__svg {
       color: rgb(51, 50, 50);
     }
   }
   &__img {
     img {
       width: 70px;
-    height: 70px;
-    background-size: cover;
-    border-radius: 7px;
+      height: 70px;
+      background-size: cover;
+      border-radius: 7px;
     }
   }
   &__about {
     width: 280px;
   }
   &__title {
-    @include font (16px, 600);
+    @include font(16px, 600);
     color: $black;
   }
-  &__size, &__code {
-    @include font (12px, 400);
+  &__size,
+  &__code {
+    @include font(12px, 400);
     color: $dark-grey;
   }
   &__count {
@@ -32,13 +33,13 @@
     align-items: center;
     &-num {
       margin: 0 8px;
-      @include font (16px, 400);
+      @include font(16px, 400);
       color: $dark-grey;
     }
   }
   &__price {
     margin-left: 10px;
-    @include font (16px, 400);
+    @include font(16px, 400);
     color: $dark-grey;
     white-space: nowrap;
   }

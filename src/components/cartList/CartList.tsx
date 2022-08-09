@@ -1,5 +1,5 @@
-import { Line } from "../../composables"
-import { CartItem } from "../cartItem/CartItem"
+import { Line } from "../../composables";
+import { CartItem } from "../cartItem/CartItem";
 
 // import './cartList.scss'
 
@@ -15,5 +15,5 @@ export const CartList = () => {
       <Line />
       <p className="cartList__total">Subtotal: 45 100RUB</p>
     </div>
-  )
-}
+  );
+};

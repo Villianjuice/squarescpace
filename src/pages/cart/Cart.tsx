@@ -1,6 +1,6 @@
-import { CartList, Form } from '../../components'
+import { CartList, Form } from "../../components";
 
-import './cart.scss'
+import "./cart.scss";
 
 const Cart = () => {
   return (
@@ -8,7 +8,7 @@ const Cart = () => {
       <CartList />
       <Form />
     </section>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

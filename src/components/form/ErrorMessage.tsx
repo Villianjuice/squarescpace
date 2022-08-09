@@ -1,14 +1,12 @@
-import React from 'react'
-import { FieldError } from 'react-hook-form'
+import React from "react";
+import { FieldError } from "react-hook-form";
 
 interface ErrorMessageProps {
-  obj: FieldError | undefined
+  obj: FieldError | undefined;
 }
 
-export const ErrorMessage: React.FC <ErrorMessageProps> = ({obj}) => {
+export const ErrorMessage: React.FC<ErrorMessageProps> = ({ obj }) => {
   return (
-    <div className='form__error'>
-      {obj && <p>{obj?.message || 'Error'}</p>}
-    </div>
-  )
-}
+    <div className="form__error">{obj && <p>{obj?.message || "Error"}</p>}</div>
+  );
+};

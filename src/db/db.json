@@ -59,26 +59,6 @@
     "size": [1, 2]
   },
   {
-    "id": 4,
-    "title": "SHIRT JACKET BASIC",
-    "price": 4000,
-    "desc": [
-      "Материал: 100% хлопок, сатин 300 гр <br> Печать логотипа: шелкография",
-      "Детали: 2 кармана, 12 металлических пуговиц паттерн-логотипом, бирка из хлопка с логотипом паттерна под воротником с внутренней стороны <br> В комплект входит: вещь, стикер, матовая упаковка для хранения вещи на зип-молнии"
-    ],
-    "mainImage": "https://thumb.tildacdn.com/tild3038-6361-4065-b863-306266613230/-/format/webp/image.png",
-    "secondImage": "https://thumb.tildacdn.com/tild6662-6366-4636-b865-333164353762/-/format/webp/image.png",
-    "images": [
-      "https://thumb.tildacdn.com/tild3038-6361-4065-b863-306266613230/-/format/webp/image.png",
-      "https://thumb.tildacdn.com/tild6662-6366-4636-b865-333164353762/-/format/webp/image.png",
-      "https://thumb.tildacdn.com/tild3837-6239-4566-a433-396162623032/-/format/webp/image.png",
-      "https://thumb.tildacdn.com/tild3038-6464-4939-b636-333832383732/-/format/webp/image.png",
-      "https://thumb.tildacdn.com/tild3066-3762-4139-b632-353736643534/-/format/webp/image.png"
-    ],
-    "code": "",
-    "size": []
-  },
-  {
     "id": 3,
     "title": "RING PATTERN",
     "price": 6900,
@@ -117,6 +97,26 @@
     ],
     "code": "GJ-E1PS-2",
     "size": [1, 2]
+  },
+  {
+    "id": 4,
+    "title": "SHIRT JACKET BASIC",
+    "price": 4000,
+    "desc": [
+      "Материал: 100% хлопок, сатин 300 гр <br> Печать логотипа: шелкография",
+      "Детали: 2 кармана, 12 металлических пуговиц паттерн-логотипом, бирка из хлопка с логотипом паттерна под воротником с внутренней стороны <br> В комплект входит: вещь, стикер, матовая упаковка для хранения вещи на зип-молнии"
+    ],
+    "mainImage": "https://thumb.tildacdn.com/tild3038-6361-4065-b863-306266613230/-/format/webp/image.png",
+    "secondImage": "https://thumb.tildacdn.com/tild6662-6366-4636-b865-333164353762/-/format/webp/image.png",
+    "images": [
+      "https://thumb.tildacdn.com/tild3038-6361-4065-b863-306266613230/-/format/webp/image.png",
+      "https://thumb.tildacdn.com/tild6662-6366-4636-b865-333164353762/-/format/webp/image.png",
+      "https://thumb.tildacdn.com/tild3837-6239-4566-a433-396162623032/-/format/webp/image.png",
+      "https://thumb.tildacdn.com/tild3038-6464-4939-b636-333832383732/-/format/webp/image.png",
+      "https://thumb.tildacdn.com/tild3066-3762-4139-b632-353736643534/-/format/webp/image.png"
+    ],
+    "code": "",
+    "size": []
   },
   {
     "id": 6,
@@ -186,7 +186,7 @@
     "title": "HOODIE NELLY",
     "price": 6990,
     "desc": [
-      "Крой: оверсайз, большой капюшон <br> Материал: 100% хлопок, футер 3х нитка 470 гр без начеса <br> Принт: шелкография, стразы Swarovski", 
+      "Крой: оверсайз, большой капюшон <br> Материал: 100% хлопок, футер 3х нитка 470 гр без начеса <br> Принт: шелкография, стразы Swarovski",
       "Принт на спине: шелкография <br> Детали: жаккардовая бирка, подкладка в кармане и внутри капюшона (приятно короче очень) <br> Упаковка: многоразовый матовый зип-лок для хранения вещей, стикер к коллекции"
     ],
     "mainImage": "https://thumb.tildacdn.com/tild3030-6136-4263-a662-343866333365/-/format/webp/image.png",
@@ -223,5 +223,4 @@
     "code": "H4B-SM",
     "size": ["S-M", "L-XL"]
   }
-
 ]

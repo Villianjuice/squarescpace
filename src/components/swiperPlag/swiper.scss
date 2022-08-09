@@ -1,4 +1,3 @@
-
 .swiper {
   margin: 20px 0;
   &__block {
@@ -7,29 +6,30 @@
     width: 45%;
   }
 }
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   width: 35px !important;
   height: 35px !important;
   border-radius: 50px;
   &:hover {
     background: black;
   }
-} 
+}
 .swiper-button-prev::before {
-  content: '';
+  content: "";
   display: inline-flex;
-  background-image: url('../../assets/less-than-sign-10625.svg');
+  background-image: url("../../assets/less-than-sign-10625.svg");
   background-size: 16px 16px;
   height: 16px;
   width: 16px;
 }
 .swiper-button-next::before {
-  content: '';
-    display: inline-flex;
-    background-image: url('../../assets/greater-than-sign-10086.svg');
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
+  content: "";
+  display: inline-flex;
+  background-image: url("../../assets/greater-than-sign-10086.svg");
+  background-size: 16px 16px;
+  height: 16px;
+  width: 16px;
 }
 
 .swiper-slide {

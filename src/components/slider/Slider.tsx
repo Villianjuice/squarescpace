@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-export  function Slider() {
+export function Slider() {
   return (
     <>
       <h3 className="slider__title">Смотрите также</h3>
@@ -17,7 +17,7 @@ export  function Slider() {
         modules={[FreeMode, Navigation]}
         className="mySwiper"
       >
-       <SwiperSlide>
+        <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
         </SwiperSlide>
         <SwiperSlide>
