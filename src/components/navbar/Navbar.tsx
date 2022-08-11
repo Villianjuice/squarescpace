@@ -1,13 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { createSelector } from "@reduxjs/toolkit";
 import Badge from "@mui/material/Badge";
 import { IconContext } from "react-icons";
 import { GiShoppingBag } from "react-icons/gi";
 
-import "./Navbar.scss";
+import { useAppSelector } from "../../redux/hook";
+import { RootState } from "../../redux/store";
+
 import Logo from "../../assets/squarespace-logo-horizontal-black.svg";
+import "./Navbar.scss";
 
 export const Navbar: React.FC = () => {
+  const selectItemsLength = createSelector(
+    (state: RootState) => state.cart,
+    (cart) => cart.items.length
+  )
+
+  const itemsLength = useAppSelector(selectItemsLength)
+
   return (
     <div className="container">
       <nav className="nav ">
@@ -20,7 +31,7 @@ export const Navbar: React.FC = () => {
           <li>
             <Link to="/cart">
               <IconContext.Provider value={{ size: "25px" }}>
-                <Badge color="error" badgeContent="1">
+                <Badge color="error" badgeContent={itemsLength}>
                   <GiShoppingBag color="black" />
                 </Badge>
               </IconContext.Provider>

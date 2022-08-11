@@ -5,7 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback, Navbar, Spinner } from "../index";
 import { RowRun } from "../../composables";
 
-import "../../scss/indes.scss";
+import "../../scss/index.scss";
 
 const Main = lazy(() => import("../../pages/main/Main"));
 const Cart = lazy(() => import("../../pages/cart/Cart"));

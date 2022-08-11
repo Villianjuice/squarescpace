@@ -1,5 +1,3 @@
-import { Url } from "url";
-
 export type FormInputs = {
   email: string;
   phone: string;
@@ -10,18 +8,28 @@ export type FormInputs = {
 };
 
 export interface IItemImages {
-  images: string[] | null;
+  images: string[] ;
 }
 
 export interface IItemAbout {
-  id: number;
+  id: string;
   title: string;
   price: number;
   desc: string[];
   mainImage: string;
   secondImage: string;
   code: string;
-  size: string[] | number[];
+  sizes: string[] ;
+}
+
+export interface IItemCart {
+  id: string;
+  title: string;
+  size: string ;
+  code: string;
+  price: number;
+  mainImage: string;
+  count: number;
 }
 
 export interface IItem extends IItemImages, IItemAbout{}

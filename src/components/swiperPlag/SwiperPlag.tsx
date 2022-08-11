@@ -20,7 +20,7 @@ export const SwiperPlag: React.FC<IItemImages> = ({images}) => {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
-        {images?.map((img, i) => 
+        {images.map((img, i) => 
           <SwiperSlide key={i}>
             <img src={img} alt="img"/>
           </SwiperSlide>

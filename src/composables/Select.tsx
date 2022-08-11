@@ -1,17 +1,18 @@
-import { useState } from "react";
+import React from "react";
 import { InputLabel, MenuItem, FormControl } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
-interface Items {
-  items: string[] | number[];
+interface SelectSmallProps {
+  sizes: string[] | number[];
+  size: string;
+  setSize: React.Dispatch<React.SetStateAction<string>>
 }
 
-export const SelectSmall: React.FC<Items> = ({ items }) => {
-  const [age, setAge] = useState("");
+export const SelectSmall: React.FC<SelectSmallProps> = ({ sizes, size, setSize }) => {
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
-    console.log("first");
+    setSize(event.target.value);
+    console.log("render");
   };
 
   return (
@@ -20,19 +21,18 @@ export const SelectSmall: React.FC<Items> = ({ items }) => {
       <Select
         labelId="demo-select-small"
         id="demo-select-small"
-        value={age}
-        label="Age"
+        value={size}
+        label="Size"
         onChange={handleChange}
       >
-        <MenuItem value="">
-          <em>None</em>
-        </MenuItem>
-        {items.map((item) => (
-          <MenuItem key={item} value={item}>
-            {item}
+        {sizes.map((size) => (
+          <MenuItem key={size} value={size}>
+            {size}
           </MenuItem>
         ))}
       </Select>
     </FormControl>
   );
 };
+
+export const SelectSize = React.memo(SelectSmall);
