@@ -36,7 +36,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 img {
   width: 100%;
@@ -64,4 +64,5 @@ button {
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  // max-width: 1200px;
 }

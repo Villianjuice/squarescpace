@@ -1,46 +1,27 @@
-import React, { useState } from "react";
-import { MainItem, Spinner } from "../../components";
-
-import { IItem } from "../../ts/types";
+import { useEffect } from 'react'
+import { ErrorMessage, MainItem, Spinner } from '../../components'
+import { useAppDispatch, useAppSelector } from '../../redux/hook'
+import { fetchItems } from '../../redux/slices/ItemsSlice'
 
 const Main = () => {
-  const [items, setItems] = useState<IItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const { loading, error, items } = useAppSelector((state) => state.items)
+  const dispatch = useAppDispatch()
 
-  const fetchItems = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch(
-        "https://62f21f39b1098f15080bac7e.mockapi.io/items"
-      );
-      const data: IItem[] = await response.json();
-      setItems(data);
-      setLoading(false);
-    } catch (err) {
-      setError(true);
-      console.log(err);
-    }
-  };
+  useEffect(() => {
+    dispatch(fetchItems())
+  }, [dispatch])
 
-  React.useEffect(() => {
-    fetchItems();
-  }, []);
-
-  const skeletons = [...new Array(8)].map((_, index) => (
-    <Spinner key={index} />
-  ));
+  const skeletons = [...new Array(8)].map((_, index) => <Spinner key={index} />)
 
   return (
-    <section className="main container-margin">
-      <div className="main__list">
-
+    <section className='main container-margin'>
+      <div className='main__list'>
         {items && items.map((item) => <MainItem {...item} key={item.id} />)}
-
         {loading && skeletons}
       </div>
+      {error && <ErrorMessage message={error} />}
     </section>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main

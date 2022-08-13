@@ -8,11 +8,11 @@
     img {
       margin: 15px 0;
       &:hover {
-        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
         border-radius: 10px;
       }
     }
-    
+
     .item-about {
       padding: 10px 0;
       h3 {
@@ -22,7 +22,7 @@
       }
       p {
         margin-top: 12px;
-        @include font (12px, 500);
+        @include font(12px, 500);
         color: $grey-text;
       }
     }

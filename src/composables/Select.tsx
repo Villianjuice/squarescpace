@@ -1,28 +1,27 @@
-import React from "react";
-import { InputLabel, MenuItem, FormControl } from "@mui/material";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import React from 'react'
+import { InputLabel, MenuItem, FormControl } from '@mui/material'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
 
 interface SelectSmallProps {
-  sizes: string[] | number[];
-  size: string;
+  sizes: string[] | number[]
+  size: string
   setSize: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const SelectSmall: React.FC<SelectSmallProps> = ({ sizes, size, setSize }) => {
-
   const handleChange = (event: SelectChangeEvent) => {
-    setSize(event.target.value);
-    console.log("render");
-  };
+    setSize(event.target.value)
+    console.log('render')
+  }
 
   return (
-    <FormControl sx={{ width: "200px", m: "20px 0" }} size="small">
-      <InputLabel id="demo-select-small">Size</InputLabel>
+    <FormControl sx={{ width: '200px', m: '20px 0' }} size='small'>
+      <InputLabel id='demo-select-small'>Size</InputLabel>
       <Select
-        labelId="demo-select-small"
-        id="demo-select-small"
+        labelId='demo-select-small'
+        id='demo-select-small'
         value={size}
-        label="Size"
+        label='Size'
         onChange={handleChange}
       >
         {sizes.map((size) => (
@@ -32,7 +31,7 @@ export const SelectSmall: React.FC<SelectSmallProps> = ({ sizes, size, setSize }
         ))}
       </Select>
     </FormControl>
-  );
-};
+  )
+}
 
-export const SelectSize = React.memo(SelectSmall);
+export const SelectSize = React.memo(SelectSmall)

@@ -1,8 +1,12 @@
 import errorGif from './004error.gif'
 
-export const ErrorMessage = () => {
+interface ErrorMessageProps {
+  message: string
+}
+
+export const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => {
   return (
-    <div>
+    <div className='errorBoundary'>
       <img
         src={errorGif}
         style={{
@@ -12,8 +16,9 @@ export const ErrorMessage = () => {
           objectFit: 'contain',
           margin: '0 auto',
         }}
-        alt="errorGif"
-    />
+        alt='errorGif'
+      />
+      <pre>{message}</pre>
     </div>
   )
 }

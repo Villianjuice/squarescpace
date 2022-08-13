@@ -16,17 +16,17 @@
   }
 }
 .swiper-button-prev::before {
-  content: "";
+  content: '';
   display: inline-flex;
-  background-image: url("../../assets/less-than-sign-10625.svg");
+  background-image: url('../../assets/less-than-sign-10625.svg');
   background-size: 16px 16px;
   height: 16px;
   width: 16px;
 }
 .swiper-button-next::before {
-  content: "";
+  content: '';
   display: inline-flex;
-  background-image: url("../../assets/greater-than-sign-10086.svg");
+  background-image: url('../../assets/greater-than-sign-10086.svg');
   background-size: 16px 16px;
   height: 16px;
   width: 16px;

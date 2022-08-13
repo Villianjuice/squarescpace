@@ -10,16 +10,17 @@ export const ItemProduct = () => {
   const [item, setItem] = React.useState<IItem | null>(null)
   const [loading, setLoading] = React.useState(false)
 
-  const {id} = useParams()
+  const { id } = useParams()
 
-  const fetchItem = async() => {
+  const fetchItem = async () => {
     try {
       setLoading(true)
-      const {data} = await axios.get<IItem>(`https://62f21f39b1098f15080bac7e.mockapi.io/items/${id}`)
+      const { data } = await axios.get<IItem>(
+        `https://62f21f39b1098f15080bac7e.mockapi.io/items/${id}`,
+      )
       setItem(data)
       setLoading(false)
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e)
     }
   }
@@ -29,11 +30,11 @@ export const ItemProduct = () => {
   }, [])
 
   return (
-    <div className="item__product">
-      {loading && <Spinner width />} 
+    <div className='item__product'>
+      {loading && <Spinner width />}
       {item?.images ? <SwiperPlag images={item?.images} /> : null}
-      {loading && <Spinner width />} 
-      {item ? <Desc {...item}/> : null}
+      {loading && <Spinner width />}
+      {item ? <Desc {...item} /> : null}
     </div>
   )
 }
