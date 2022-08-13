@@ -1,7 +1,6 @@
 .form {
   width: 43%;
   &__title {
-    @include font(22px, 700);
     margin-bottom: 18px;
   }
   &__label {
@@ -27,5 +26,19 @@
     @include font(14px, 400);
     align-self: flex-end;
     text-align: end;
+  }
+}
+
+@media (max-width: 620px) {
+  .form {
+    width: 100%;
+    &__label {
+      margin: 7px 0;
+      font-size: 15px;
+    }
+    &__input {
+      padding: 7px 0;
+      font-size: 15px;
+    }
   }
 }

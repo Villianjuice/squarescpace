@@ -38,21 +38,24 @@ export const CartItem: React.FC<IItemCart> = ({
       <div className='cartItem__img'>
         <img src={mainImage} alt={`${title} img`} />
       </div>
-      <div className='cartItem__about'>
-        <Link to='/' className='cartItem__title'>
-          {title}
-        </Link>
-        <p className='cartItem__size'>Размер: {size}</p>
-        <p className='cartItem__code'>{code}</p>
+      <div className="cartItem__flex">
+        <div className='cartItem__about'>
+          <Link to='/' className='cartItem__title'>
+            {title}
+          </Link>
+          <p className='cartItem__size'>Размер: {size}</p>
+          <p className='cartItem__code'>{code}</p>
+        </div>
+        <div className='cartItem__count'>
+          <AiOutlineMinusCircle size={15} onClick={decrementItem} className='cartItem__svg' />
+          <div className='cartItem__count-num typography'>{count}</div>
+          <AiOutlinePlusCircle size={15} onClick={incrementItem} className='cartItem__svg' />
+        </div>
       </div>
-      <div className='cartItem__count'>
-        <AiOutlineMinusCircle size={18} onClick={decrementItem} className='cartItem__svg' />
-        <div className='cartItem__count-num'>{count}</div>
-        <AiOutlinePlusCircle size={18} onClick={incrementItem} className='cartItem__svg' />
-      </div>
-      <div className='cartItem__price'>{price * count} RUB</div>
-      <div>
-        <TiDeleteOutline onClick={onClickRemove} size={23} className='cartItem__svg' />
+      
+      <div className='cartItem__price typography'>{price * count} RUB</div>
+      <div style={{display: 'flex'}}>
+        <TiDeleteOutline onClick={onClickRemove} size={20} className='cartItem__svg' />
       </div>
     </div>
   )

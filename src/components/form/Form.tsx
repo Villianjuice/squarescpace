@@ -2,7 +2,7 @@ import { useForm, Controller, SubmitHandler } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
 
 import { FormInputs } from '../../ts/types'
-import { ErrorMessage } from './ErrorMessage'
+import { ErrorMessage } from './ErrorMessageForm'
 import { Line } from '../../composables'
 import { useAppSelector } from '../../redux/hook'
 
@@ -18,7 +18,7 @@ export const Form = () => {
 
   return (
     <form className='form' onSubmit={handleSubmit(onSubmit)}>
-      <h2 className='form__title'>Доставка</h2>
+      <h2 className='form__title title'>Доставка</h2>
       <Line />
       <label className='form__label'>
         E-mail
@@ -105,9 +105,9 @@ export const Form = () => {
       <ErrorMessage obj={errors.postal} />
 
       <p className='form__info'>Subtotal: {totalPrice ? `${totalPrice} RUB` : ''} </p>
-      <p className='form__info'>Международная доставка — Worldwide Shipping:1 700RUB</p>
+      <p className='form__info'>Доставка — Worldwide Shipping: 900 RUB</p>
 
-      <p className='cartList__total'>Total: {totalPrice ? `${totalPrice + 1700} RUB` : '' }</p>
+      <p className='cartList__total'>Total: {totalPrice ? `${totalPrice + 900} RUB` : '' }</p>
 
       <input type='submit' className='btn btn__form' value='ЗАКАЗАТЬ' />
     </form>

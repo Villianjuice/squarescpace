@@ -8,7 +8,7 @@ import { GiShoppingBag } from 'react-icons/gi'
 import { useAppSelector } from '../../redux/hook'
 import { RootState } from '../../redux/store'
 
-import Logo from '../../assets/squarespace-logo-horizontal-black.svg'
+import Logo from '../../assets/logo.svg'
 import './Navbar.scss'
 
 export const Navbar: React.FC = () => {

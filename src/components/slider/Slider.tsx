@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Navigation } from 'swiper'
 import { createSelector } from '@reduxjs/toolkit'
-import { useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
 import { useAppSelector } from '../../redux/hook'
 import { RootState } from '../../redux/store'
@@ -19,7 +19,7 @@ export function Slider() {
     ({items}) => items.filter(item => item.id !== id).sort((a, b) => b.price - a.price)
   )
 
-  const images = useAppSelector(selectImages) 
+  const items = useAppSelector(selectImages) 
 
   return (
     <>
@@ -32,9 +32,12 @@ export function Slider() {
         modules={[FreeMode, Navigation]}
         className='mySwiper'
       >
-        {images.map(image => 
-          <SwiperSlide>
-            <img key={image.id} alt={image.title} src={image.mainImage} />
+        {items.map((item, i) => 
+          <SwiperSlide key={i}>
+            {/* <Link to={`/item/${item.id}`} > */}
+              <img alt={item.title} src={item.mainImage} />
+
+            {/* </Link> */}
           </SwiperSlide>
         )}
         

@@ -90,3 +90,11 @@
     border: 1px solid black;
   }
 }
+
+@media (max-width: 620px) {
+  .swiper {
+    &__block {
+      width: 95%;
+    }
+  }
+}

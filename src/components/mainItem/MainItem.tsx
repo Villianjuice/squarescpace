@@ -16,8 +16,8 @@ export const MainItem: React.FC<MainItemProps> = ({ mainImage, secondImage, titl
         />
       </div>
       <div className='item-about'>
-        <h3 className='about-title'>{title}</h3>
-        <p className='about-price'>{price} RUB</p>
+        <h3 className='title-text'>{title}</h3>
+        <p className='typography'>{price} RUB</p>
       </div>
     </Link>
   )

@@ -17,7 +17,7 @@
     }
   }
   &__about {
-    width: 280px;
+    
   }
   &__title {
     @include font(16px, 600);
@@ -28,23 +28,41 @@
     @include font(12px, 400);
     color: $dark-grey;
   }
+  &__flex {
+    display: flex;
+    width: 280px;
+  }
   &__count {
     display: flex;
     align-items: center;
     &-num {
       margin: 0 8px;
-      @include font(16px, 400);
-      color: $dark-grey;
     }
   }
   &__price {
     margin-left: 10px;
-    @include font(16px, 400);
-    color: $dark-grey;
     white-space: nowrap;
   }
   &__svg {
     color: $dark-grey;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 620px) {
+  .cartItem {
+    &__title {
+      font-size: 9px;
+    }
+    &__flex {
+      flex-direction: column;
+    }
+    &__size,
+    &__code {
+      font-size: 10px;
+    }
+    &__flex {
+      width: 45%;
+    }
   }
 }

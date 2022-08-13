@@ -22,12 +22,12 @@ export const Desc: React.FC<IItem> = ({ title, code, price, sizes, desc, id, mai
       mainImage,
     }
     dispatch(addItem(itemCart))
-  }, [dispatch, id, title, code, price, size])
+  }, [dispatch, id, title, code, price, size, mainImage])
 
   return (
     <div className='desc'>
-      <h3 className='desc__title'>{title}</h3>
-      <p className='desc__code'>SKU: {code}</p>
+      <h3 className='title'>{title}</h3>
+      <p className='desc__code typography'>SKU: {code}</p>
       <p className='desc__price'>{price} RUB</p>
       <SelectSmall sizes={sizes} size={size} setSize={setSize} />
       <Button width='250px' onClick={addToCart} title='ADD TO CART' />

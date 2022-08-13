@@ -17,10 +17,10 @@ export const CartList = () => {
 
   return (
     <div className='cartList'>
-      <div className='cartList__title'>
+      <div className='cartList__title title'>
         Оформление заказа
         {items.length > 0 && (
-          <button onClick={onClearItems} className='cartList__clear'>
+          <button onClick={onClearItems} className='cartList__clear typography'>
             Очистить корзину
           </button>
         )}

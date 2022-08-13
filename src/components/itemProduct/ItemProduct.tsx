@@ -1,40 +1,61 @@
+import { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import { IItem } from '../../ts/types'
 import { Desc } from '../desc/Desc'
+import { ErrorMessage } from '../index'
 import { Spinner } from '../spinner/Spinner'
 import { SwiperPlag } from '../swiperPlag/SwiperPlag'
 
 export const ItemProduct = () => {
-  const [item, setItem] = React.useState<IItem | null>(null)
-  const [loading, setLoading] = React.useState(false)
+  const [item, setItem] = useState<IItem | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
 
   const { id } = useParams()
 
-  const fetchItem = async () => {
+  const fetchItem = useCallback( async () => {
+    setLoading(true)
+    setError(null)
     try {
-      setLoading(true)
       const { data } = await axios.get<IItem>(
         `https://62f21f39b1098f15080bac7e.mockapi.io/items/${id}`,
       )
       setItem(data)
       setLoading(false)
-    } catch (e) {
-      console.log(e)
+    } catch (error) {
+      setLoading(false)
+      setError('Server error!')
     }
-  }
+ }, [id])
 
-  React.useEffect(() => {
+
+  useEffect(() => {
     fetchItem()
-  }, [])
+  }, [fetchItem])
 
   return (
-    <div className='item__product'>
-      {loading && <Spinner width />}
-      {item?.images ? <SwiperPlag images={item?.images} /> : null}
-      {loading && <Spinner width />}
-      {item ? <Desc {...item} /> : null}
-    </div>
+    <>
+      <div className='item__product'>
+        {loading && 
+          <>
+            <Spinner width /> 
+            <Spinner width /> 
+          </> 
+        }
+        {item && 
+        <>
+          <SwiperPlag images={item.images} />
+          <Desc {...item} /> 
+        </>
+        }
+      </div>
+      
+      {error && <ErrorMessage message={error} />}
+      
+    </>
+    
+
   )
 }

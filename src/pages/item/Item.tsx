@@ -9,7 +9,6 @@ const Item = () => {
   return (
     <section className='item container-margin'>
       <Link to='/' className='item__link'>
-        {' '}
         ← More products
       </Link>
       <ItemProduct />
