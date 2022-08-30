@@ -25,6 +25,8 @@
 @media (max-width: 620px) {
   .desc {
     width: 95%;
+    align-items: center;
+
     &__code {
       color: $grey-text;
       @include font(12px, 300);

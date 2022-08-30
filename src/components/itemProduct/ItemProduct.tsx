@@ -1,39 +1,27 @@
-import { useCallback, useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { IItem } from '../../ts/types'
 import { Desc } from '../desc/Desc'
 import { ErrorMessage } from '../index'
 import { Spinner } from '../spinner/Spinner'
 import { SwiperPlag } from '../swiperPlag/SwiperPlag'
+import { useAppDispatch, useAppSelector } from '../../redux/hook'
+import { fetchProduct, unfetchProduct } from '../../redux/slices/ProductSlice'
 
 export const ItemProduct = () => {
-  const [item, setItem] = useState<IItem | null>(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const {item, loading, error} = useAppSelector(state => state.product);
+  const dispatch = useAppDispatch()
 
-
-  const { id } = useParams()
-
-  const fetchItem = useCallback( async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const { data } = await axios.get<IItem>(
-        `https://62f21f39b1098f15080bac7e.mockapi.io/items/${id}`,
-      )
-      setItem(data)
-      setLoading(false)
-    } catch (error) {
-      setLoading(false)
-      setError('Server error!')
-    }
- }, [id])
-
+  const {id} = useParams()
 
   useEffect(() => {
-    fetchItem()
-  }, [fetchItem])
+    if (id) {
+      dispatch(fetchProduct(id))
+
+      return () => {
+        dispatch(unfetchProduct())
+      }
+    }
+  }, [id, dispatch])
 
   return (
     <>

@@ -222,5 +222,26 @@
     ],
     "code": "H4B-SM",
     "sizes": ["S-M", "L-XL"]
+  },
+  {
+    "id": "11",
+    "title": "HOODIE YOON AHN",
+    "price": 6500,
+    "desc": [
+      "Крой: оверсайз, большой капюшон Материал: 100% хлопок, футер 3х нитка 470 гр без начеса Принт: шелкография Принт на спине: шелкография",
+      "Детали: жаккардовая бирка, подкладка в кармане и внутри капюшона (приятно короче очень) Упаковка: многоразовый матовый зип-лок для хранения вещей, стикер к коллекции"
+    ],
+    "mainImage": "https://thumb.tildacdn.com/tild6638-3666-4238-b431-343435303138/-/format/webp/image.png",
+    "secondImage": "https://thumb.tildacdn.com/tild3131-3130-4639-b562-313438643433/-/format/webp/image.png",
+    "images": [
+      "https://thumb.tildacdn.com/tild6638-3666-4238-b431-343435303138/-/format/webp/image.png",
+      "https://thumb.tildacdn.com/tild3131-3130-4639-b562-313438643433/-/format/webp/image.png",
+      "https://static.tildacdn.com/tild6238-3966-4731-a230-366666643964/image.png",
+      "https://static.tildacdn.com/tild3266-3763-4334-a663-306631653633/image.png",
+      "https://static.tildacdn.com/tild3536-6361-4339-b432-363863353236/image.png",
+      "https://static.tildacdn.com/tild3864-6638-4364-a131-376663383162/image.png"
+    ],
+    "code": "SKU: H4W-S",
+    "sizes": ["S", "M", "L", "XL"]
   }
 ]

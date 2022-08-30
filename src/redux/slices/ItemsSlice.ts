@@ -1,5 +1,6 @@
-import { AnyAction, createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { IItem } from '../../ts/types'
+import { isError } from '../hook'
 
 interface IItemsState {
   items: IItem[]
@@ -48,7 +49,3 @@ const ItemsSlice = createSlice({
 })
 
 export default ItemsSlice.reducer
-
-function isError(action: AnyAction) {
-  return action.type.endsWith('rejected')
-}
